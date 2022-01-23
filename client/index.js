@@ -2,6 +2,7 @@ import "./index.scss";
 
 const server = "http://localhost:3042";
 
+
 document.getElementById("exchange-address").addEventListener('input', ({ target: {value} }) => {
   if(value === "") {
     document.getElementById("balance").innerHTML = 0;
@@ -16,6 +17,7 @@ document.getElementById("exchange-address").addEventListener('input', ({ target:
 });
 
 document.getElementById("transfer-amount").addEventListener('click', () => {
+  const privKey = document.getElementById("private-key").value;
   const sender = document.getElementById("exchange-address").value;
   const amount = document.getElementById("send-amount").value;
   const recipient = document.getElementById("recipient").value;
